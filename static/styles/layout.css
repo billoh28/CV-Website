@@ -1,0 +1,124 @@
+/* Change colour of website background*/
+body {
+    background-color: #F1FFFF;
+    font-family:arial,helvetica;
+}
+
+/* Set scroll behaviour */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fill whole screen */
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Change bulet point to square */
+ul, li {
+    list-style: square;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Page wrapper styling */
+.wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+/*Change colour of background nav-bar */
+.nav-bar { 
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #004d99;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+
+/* Makes nav-bar Horizontal*/
+.nav-button {
+    top: 0;
+    left: 0;
+    right: 0;
+    list-style-type: none;
+    float: left;
+    text-align: center;
+}
+
+/* Options on buttons in nav-bar*/
+.nav-button a {
+    display: inline-flex;
+    color: white;
+    text-align: center;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+/* Change colour of nav-bar hover */
+.nav-button a:hover {
+    background-color: #F1FFFF;
+    color: black;
+}
+
+/* Styling page content block */    
+.content {
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 1%;
+    border-left: solid #5B6DCD 5px;
+    border-right: solid #5B6DCD 5px;
+    background-color: white;
+}
+
+/* Split Page Styling */
+.split-page {
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.split-text {
+    padding: 2px;
+}
+
+.image {
+    max-width: 50%;
+    height: auto;
+    position: center;
+    display: block; 
+    overflow: hidden;
+    float: right;
+}
+
+/* Styling the Footer */
+.footer {
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #b3daff;
+    color: black;
+    padding: 1%;
+    position: relative;
+    display: block;
+}
+
+/* Education Page Styling */
+.education-table td {
+    border-bottom: solid #5B6DCD 2px;
+}
+
+.education-result {
+    width: 50%;
+    text-align: right;
+}

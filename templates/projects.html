@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="split-page">
+    <h1>Projects</h1>
+
+    <br>
+
+    <div class="split-text">
+        <img src="static/nn_result.jpg" alt="" class="image">
+
+        <h3>Sign Language Translator - Third Year Project</h3>
+
+        <p>As our third year project, my project partner and I wrote and trained Neural Networks to translate Irish Sign Language from prerecorded video into audio.</p>
+        <p>The program we produced utilised Convoluted Neural Networks (CNN) and computer vision libraries, written in Python 3.</p>
+
+        <br>
+
+        <p>The functions of this program are as follows:</p>
+            <ul>
+                <li><p>Converts a video into frames, applying image processing to convert the frames into multi-dimensional arrays and feed them to a trained CNN model.</p></li>
+                <li><p>Accumulates the output of the CNN models to plain text.</p></li>
+                <li><p>Convert the text produced by the CNN into audio, and save the audio file into the current working directory.</p></li>
+            </ul>
+
+        <br>
+
+        <p>A graph and confusion matrix depicting this result is show on the right of the page.</p>
+
+        <p>This communication channel has the potential to greatly decrease the impacts of deafness, and other communication disorders, which could reduce loneliness and isolation in these communities.</p>
+
+        <p>We received a first class honours in this project.</p>
+
+        <a href="https://student.computing.dcu.ie/~ohanlow2/CA326/Pages/index.html">Project Blog</a></p>
+
+        <a href="https://gitlab.computing.dcu.ie/connok27/2020-ca326-kconnolly-signlanguagetranslator">Project GitLab Repository</a></p>
+
+        <br>
+
+        <h3>Network API - Alternate Intra</h3>
+        <p>This was part of a DCU group project meant to replicate work placement for those who lost their jobs due to COVID-19.</p>
+        <p>I worked alongside a fellow software engineering student to develop a Network API for a network of smart hand sanitiser devices. The API was wrote in Python 3 using Flask as a framework.</p>
+        <p>Functions of the API:</p>
+            <ul>
+                <li><p>Records usage statistics of the individual hand sanitiser dispensers.</p></li>
+                <li><p>Performs data analytics on the usage statistics.</p></li>
+                <li><p>Displays status of diapensers, usage statistics and data analytics report at specified endpoints requiring an API key.</p></li>
+            </ul>
+
+        <p>The GitLab repository this code is contained within is private as it contains Firebase credentials</p>
+            
+        <br>
+
+        <h3>Python Unix Shell - CA216 Operating Systems</h3>
+        <p>A Unix shell wrote in Python 3 for a second year project. The shell does not use built-in Unix shell commands and therefore is somewhat platform independent.</p>
+
+        <p>A full user manual and code is available through the following GitHub link:</p>
+
+        <a href="https://github.com/billoh28/myshell">Code Repository</a></p>
+
+        <br>
+
+        <h3>Simple Python Snake Game - Personal Project</h3>
+        <p>A simple command-line Snake game wrote using Python 3.</p>
+
+        <p>The game was wrote using pygame 1.9.6. and is available through the following GitHub link:</p>
+
+        <a href="https://github.com/billoh28/snake">Code Repository</a></p>
+
+        <br>
+
+        <h3>This CV Website</h3>
+
+        <p>Code for this website: <a href="https://github.com/billoh28">GitHub Code Repository</a></p>
+
+        <br>
+
+        <h3>Links</h3>
+
+        <p>The code for these projects, and more projects, are available at my github and gitlab repositories:</p>
+
+        <ul>
+            <li><a href="https://github.com/billoh28?tab=repositories">My GitHub</a></li>
+            <br>
+            <li><a href="https://gitlab.computing.dcu.ie/ohanlow2">My GitLab</a></li>
+        </ul>
+
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='styles/layout.css') }}">
+        <title>Bill O'Hanlon CV Website</title>
+
+        <script type="text/javascript">
+            window.onload = function() {
+
+                var a = document.getElementById("contact");
+
+                a.onclick = function() {
+                    window.scrollTo(0,document.body.scrollHeight);
+                }
+            };
+        </script>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="nav-bar">
+                <ul>
+                    <li class="nav-button"><a href=".">Home</a></li>
+                    <li class="nav-button"><a href="work_experience">Experience</a></li>
+                    <li class="nav-button"><a href="education">Education</a></li>
+                    <li class="nav-button"><a href="achievements">Achievements</a></li>
+                    <li class="nav-button"><a href="interests">Interests</a></li>
+                    <li class="nav-button"><a href="projects">Projects</a></li>
+                    <li class="nav-button"><a id="contact">Contact Details</a></li>
+                </ul>
+            </div>
+
+            <div class="page-content">
+                <div class="content">
+                    {% block content %}{% endblock %}
+                </div>
+
+                <div class="footer">
+                    <h3 class="footer-heading">Contact Details</h3>
+
+                    <ul class="contact-info">
+                        <li><p>Email: <a href="mailto:ohanlonbill1998@gmail.com">ohanlonbill1998@gmail.com</a></p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
