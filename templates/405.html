@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-
-<html>
-    <head>
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-        <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='styles/layout.css') }}">
-        <title>Bill O'Hanlon CV Website</title>
-    </head>
-    <body>
+{% extends "base.html" %}
+{% block content %}
+    <div class="error">
         <h1>ERROR: The requested method is not allowed for this resource</h1>
-        <a href=".">Return</a>    
-    </body>
-</html>
+        <a href=".">Return</a>
+    </div>
+{% endblock %}
