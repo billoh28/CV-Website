@@ -114,6 +114,26 @@ ul, li {
     margin-left: 20px;
 }
 
+/* Education Page Styling */
+.education-table td {
+    border-bottom: solid #5B6DCD 2px;
+}
+
+.education-result {
+    width: 50%;
+    text-align: right;
+}
+
+/* Styling the breaks */
+.breaks {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+    border-left: solid #5B6DCD 5px;
+    border-right: solid #5B6DCD 5px;
+    overflow: hidden;
+}
+
 /* Styling the Footer */
 .footer {
     left: 0;
@@ -127,14 +147,4 @@ ul, li {
     position: relative;
     display: block;
     border-top: solid #5B6DCD 0px; 
-}
-
-/* Education Page Styling */
-.education-table td {
-    border-bottom: solid #5B6DCD 2px;
-}
-
-.education-result {
-    width: 50%;
-    text-align: right;
 }

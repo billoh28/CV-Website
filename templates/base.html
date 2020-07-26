@@ -22,7 +22,7 @@
         <div class="wrapper">
             <div class="nav-bar">
                 <ul>
-                    <li class="nav-button"><a href=".">Home</a></li>
+                    <li class="nav-button"><a href="/">Home</a></li>
                     <li class="nav-button"><a href="work_experience">Experience</a></li>
                     <li class="nav-button"><a href="education">Education</a></li>
                     <li class="nav-button"><a href="achievements">Achievements</a></li>
@@ -36,15 +36,18 @@
                 <div class="content">
                     {% block content %}{% endblock %}
                 </div>
-
-                <div class="footer">
-                    <h3 class="footer-heading">Contact Details</h3>
-
-                    <ul class="contact-info">
-                        <li><p>Email: <a href="mailto:ohanlonbill1998@gmail.com">ohanlonbill1998@gmail.com</a></p></li>
-                    </ul>
-                </div>
             </div>
+
+            <!-- These breaks are necessary to get the footer to stick to the bottom of the page for the pages with not enough content to fill the screen -->
+            <div class="breaks"><br><br></div>
+
+            <footer class="footer">
+                <h3 class="footer-heading">Contact Details</h3>
+
+                <ul class="contact-info">
+                    <li><p>Email: <a href="mailto:ohanlonbill1998@gmail.com">ohanlonbill1998@gmail.com</a></p></li>
+                </ul>
+            </footer>
         </div>
     </body>
 </html>
