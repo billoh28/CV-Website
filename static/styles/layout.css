@@ -34,7 +34,7 @@ ul, li {
 }
 
 /*Change colour of background nav-bar */
-.nav-bar { 
+.nav-bar {
     top: 0;
     left: 0;
     right: 0;
@@ -69,7 +69,7 @@ ul, li {
     color: black;
 }
 
-/* Styling page content block */    
+/* Styling page content block */
 .content {
     margin-top: 50px;
     margin-left: 10%;
@@ -87,16 +87,31 @@ ul, li {
 }
 
 .split-text {
-    padding: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .image {
     max-width: 50%;
     height: auto;
     position: center;
-    display: block; 
+    display: block;
     overflow: hidden;
     float: right;
+    margin: 2px;
+}
+
+/* Home Page Styling */
+.home-image {
+    max-width: 40%;
+    height: auto;
+    position: center;
+    display: block;
+    overflow: hidden;
+    float: right;
+    border: solid #5B6DCD 5px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 /* Styling the Footer */
@@ -111,6 +126,7 @@ ul, li {
     padding: 1%;
     position: relative;
     display: block;
+    border-top: solid #5B6DCD 0px; 
 }
 
 /* Education Page Styling */
