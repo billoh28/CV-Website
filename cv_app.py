@@ -4,6 +4,7 @@ from flask import Flask, render_template, send_from_directory
 # Networking requirements
 import socket
 import os
+import git
 
 # run on ip address of machine
 # print ip address to terminal
@@ -32,7 +33,7 @@ DIR = os.getcwd()
 app = Flask(__name__)
 
 ###########################################################
-####### ERROR Handling ##################################
+####### ERROR Handling ####################################
 ###########################################################
 
 # File Not Found Error
@@ -83,6 +84,22 @@ def interests():
 @app.route("/favicon.ico")
 def favicon():
     return send_from_directory(os.path.join(DIR, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
+###########################################################
+####### Git Web Hook Routing ##############################
+###########################################################
+
+@app.route('/webhook', methods=['POST'])
+def webhook():
+    if request.method == 'POST':
+        repo = git.Repo('./CV-Website')
+        origin = repo.remotes.origin
+        repo.create_head('master', origin.refs.master).set_tracking_branch(origin.refs.master).checkout()
+        origin.pull()
+        return '', 200
+
+    else:
+        return '', 400
 
 ###########################################################
 ###########################################################
