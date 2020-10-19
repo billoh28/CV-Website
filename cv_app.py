@@ -46,6 +46,11 @@ def file_not_found(e):
 def method_not_allowed(e):
     return render_template("405.html"), 405
 
+# Server Error
+@app.errorhandler(500)
+def method_not_allowed(e):
+    return render_template("500.html"), 500
+
 ###########################################################
 ####### Routing Handling ##################################
 ###########################################################
