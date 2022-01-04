@@ -4,7 +4,6 @@ from flask import Flask, render_template, send_from_directory
 # Networking requirements
 import socket
 import os
-import git
 
 # run on ip address of machine
 # print ip address to terminal
@@ -94,18 +93,10 @@ def favicon():
 ####### Git Web Hook Routing ##############################
 ###########################################################
 
-@app.route('/webhook', methods=['POST'])
-def webhook():
-    if request.method == 'POST':
-        repo = git.Repo('./CV-Website')
-        origin = repo.remotes.origin
-        repo.create_head('master', origin.refs.master).set_tracking_branch(origin.refs.master).checkout()
-        origin.pull()
-        return '', 200
 
-    else:
-        return '', 400
 
 ###########################################################
 ###########################################################
 
+if __name__ == '__main__':
+    app.run(port=8888, debug=True) # run app

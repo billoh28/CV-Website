@@ -10,9 +10,39 @@
             window.onload = function() {
 
                 var a = document.getElementById("contact");
+                
+                var edu = document.getElementById("education");
+
+                var work = document.getElementById("work_experience");
+
+                var pro = document.getElementById("projects");
+
+                var ach = document.getElementById("achievements");
+
+                var int = document.getElementById("interests");
 
                 a.onclick = function() {
                     window.scrollTo(0,document.body.scrollHeight);
+                }
+
+                edu.onclick = function() {
+                    document.getElementById("edu").scrollIntoView(true);
+                }
+
+                work.onclick = function() {
+                    document.getElementById("work").scrollIntoView(true);
+                }
+
+                pro.onclick = function() {
+                    document.getElementById("pro").scrollIntoView(true);
+                }
+
+                ach.onclick = function() {
+                    document.getElementById("ach").scrollIntoView(true);
+                }
+
+                int.onclick = function() {
+                    document.getElementById("int").scrollIntoView(true);
                 }
             };
         </script>
@@ -20,32 +50,65 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="nav-bar">
-                <ul>
-                    <li class="nav-button"><a href="/">Home</a></li>
-                    <li class="nav-button"><a href="work_experience">Experience</a></li>
-                    <li class="nav-button"><a href="education">Education</a></li>
-                    <li class="nav-button"><a href="achievements">Achievements</a></li>
-                    <li class="nav-button"><a href="interests">Interests</a></li>
-                    <li class="nav-button"><a href="projects">Projects</a></li>
-                    <li class="nav-button"><a id="contact">Contact Details</a></li>
-                </ul>
-            </div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <div class="nav-bar">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" id="education">Education</a></li>
+                            <li class="nav-item"><a class="nav-link" id="work_experience">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link" id="projects">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" id="achievements">Achievements</a></li>
+                            <li class="nav-item"><a class="nav-link" id="interests">Interests</a></li>
+                            <li class="nav-item"><a class="nav-link" id="contact">Contact Details</a></li>
+                        </ul>
+                    </div>
+                </div>
+              </nav>
+            
 
             <div class="page-content">
                 <div class="content">
                     {% block content %}{% endblock %}
                 </div>
+
+                <button onclick="topFunction()" class="btn btn-primary" id="topBtn" title="Go to top">Top</button>
+                
+                <script type="text/javascript">
+                    var topButton = document.getElementById("topBtn");
+
+                    window.onscroll = function() {
+                        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                            topButton.style.display = "block";
+                        } else {
+                            topButton.style.display = "none";
+                        }
+                    };
+
+                    function topFunction() {
+                        document.documentElement.scrollTo({
+                            top: 0,
+                            behavior: "smooth"
+                        });
+                    };
+                </script>
             </div>
 
             <!-- These breaks are necessary to get the footer to stick to the bottom of the page for the pages with not enough content to fill the screen -->
-            <div class="breaks"><br><br></div>
+            <div class="breaks"><br id="test"><br></div>
 
             <footer class="footer">
+                <br>
+                
                 <h3 class="footer-heading">Contact Details</h3>
-
+                <br>
                 <ul class="contact-info">
-                    <li><p>Email: <a href="mailto:ohanlonbill1998@gmail.com">ohanlonbill1998@gmail.com</a></p></li>
+                    <li><p>Email: <a style="text-decoration:none; color:inherit;" class="footer-link" href="mailto:ohanlonbill1998@gmail.com">ohanlonbill1998@gmail.com</a></p></li>
+                    <li><p><a style="text-decoration:none; color:inherit;" class="footer-link" href="https://www.linkedin.com/in/bill-o-hanlon-2b31041b5/">LinkedIn</a></p></li>
                 </ul>
             </footer>
         </div>
