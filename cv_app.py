@@ -1,5 +1,5 @@
 #!flask/bin/python
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, send_file
 
 # Networking requirements
 import socket
@@ -83,6 +83,11 @@ def project():
 @app.route("/interests", methods=["GET"])
 def interests():
     return render_template("interests.html")
+
+# Interests Page
+@app.route("/download", methods=["GET"])
+def pdf():
+    return send_file(os.path.join(DIR, 'static', "CV_Bill_O'Hanlon.pdf"))
 
 # Browser Icon
 @app.route("/favicon.ico")
