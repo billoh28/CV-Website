@@ -87,7 +87,7 @@ def interests():
 # Interests Page
 @app.route("/download", methods=["GET"])
 def pdf():
-    return send_file(os.path.join('static', "CV_Bill_O'Hanlon.pdf"))
+    return send_file(os.path.join('static', "CV_Bill_O'Hanlon_New.pdf"))
 
 # Browser Icon
 @app.route("/favicon.ico")
