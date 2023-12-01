@@ -82,9 +82,15 @@ def project():
 # Interests Page
 @app.route("/interests", methods=["GET"])
 def interests():
+    print("Test")
     return render_template("interests.html")
 
-# Interests Page
+# Gallery Page
+@app.route("/gallery", methods=["GET"])
+def gallery():
+    return render_template("gallery.html")
+
+# Download
 @app.route("/download", methods=["GET"])
 def pdf():
     return send_file(os.path.join('static', "CV_Bill_O'Hanlon.pdf"))

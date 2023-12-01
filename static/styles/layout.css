@@ -82,6 +82,15 @@ ul, li {
     margin-bottom: 20px;
 }
 
+.gallery-image {
+    max-width: 100%;
+    height: auto;
+    position: center;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 /* Text */
 .content {
     max-width:100%;
