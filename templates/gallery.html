@@ -1,13 +1,90 @@
-{% extends "base.html" %}
-{% block content %}
-<div class="page">
-    <!--<h1 style="text-align:center">Gallery</h1>-->
-    <img src="static/tulip.png" alt="tulip" class="gallery-image">
-    <img src="static/burnout_full.png" alt="burnout" class="gallery-image">
-    <img src="static/fallibil_text.png" alt="logo" class="gallery-image">
-    <img src="static/guinness.png" alt="guinness" class="gallery-image">
-    <img src="static/madvillain_text.png" alt="madvillain" class="gallery-image">
-    <img src="static/mfdoom.png" alt="MFDOOM" class="gallery-image">
-    <img src="static/metalface_text.png" alt="metalface" class="gallery-image">
-</div>
-{% endblock %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='styles/layout.css') }}">
+        <title>Bill O'Hanlon CV Website</title>
+
+        <script type="text/javascript">
+            window.onload = function() {
+
+                var a = document.getElementById("contact");
+
+                a.onclick = function() {
+                    window.scrollTo(0,document.body.scrollHeight);
+                }
+            };
+        </script>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <div class="nav-bar">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a class="nav-link" style="color: white;" href="/">CV</a></li>
+                            <li class="nav-item"><a class="nav-link" style="color: white;" id="contact">Contact Details</a></li>
+                        </ul>
+                    </div>
+                </div>
+              </nav>
+            
+
+            <div class="page-content">
+                <div class="content">
+                    <div class="page">
+                        <!--<h1 style="text-align:center">Gallery</h1>-->
+                        <img src="static/tulip.png" alt="tulip" class="gallery-image">
+                        <img src="static/burnout_full.png" alt="burnout" class="gallery-image">
+                        <img src="static/fallibil_text.png" alt="logo" class="gallery-image">
+                        <img src="static/guinness.png" alt="guinness" class="gallery-image">
+                        <img src="static/madvillain_text.png" alt="madvillain" class="gallery-image">
+                        <img src="static/mfdoom.png" alt="MFDOOM" class="gallery-image">
+                        <img src="static/metalface_text.png" alt="metalface" class="gallery-image">
+                    </div>
+                </div>
+
+                <button onclick="topFunction()" class="btn btn-primary" id="topBtn" title="Go to top" style="background-color: #212529">Top</button>
+                
+                <script type="text/javascript">
+                    var topButton = document.getElementById("topBtn");
+
+                    window.onscroll = function() {
+                        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                            topButton.style.display = "block";
+                        } else {
+                            topButton.style.display = "none";
+                        }
+                    };
+
+                    function topFunction() {
+                        document.documentElement.scrollTo({
+                            top: 0,
+                            behavior: "smooth"
+                        });
+                    };
+                </script>
+            </div>
+
+            <!-- These breaks are necessary to get the footer to stick to the bottom of the page for the pages with not enough content to fill the screen -->
+            <div class="breaks"><br id="test"><br></div>
+
+            <footer class="footer">
+                <br>
+                
+                <h3 class="footer-heading">Contact Details</h3>
+                <br>
+                <ul class="contact-info">
+                    <li><p>Email: <a style="text-decoration:none; color:inherit;" class="footer-link" href="mailto:bohanlon.enquiries@gmail.com">bohanlon.enquiries@gmail.com</a></p></li>
+                    <li><p><a style="text-decoration:none; color:inherit;" class="footer-link" href="https://www.linkedin.com/in/bill-o-hanlon-2b31041b5/">LinkedIn</a></p></li>
+                </ul>
+            </footer>
+        </div>
+    </body>
+</html>

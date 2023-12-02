@@ -59,31 +59,31 @@ def method_not_allowed(e):
 def home():
     return render_template("home.html")
 
-# Work Experience Page
-@app.route("/work_experience", methods=["GET"])
-def work_exp():
-    return render_template("work_experience.html")
+# # Work Experience Page
+# @app.route("/work_experience", methods=["GET"])
+# def work_exp():
+#     return render_template("work_experience.html")
 
-# Education Page
-@app.route("/education", methods=["GET"])
-def edu():
-    return render_template("education.html")
+# # Education Page
+# @app.route("/education", methods=["GET"])
+# def edu():
+#     return render_template("education.html")
 
-# Achievements Page
-@app.route("/achievements", methods=["GET"])
-def achieve():
-    return render_template("achievements.html")
+# # Achievements Page
+# @app.route("/achievements", methods=["GET"])
+# def achieve():
+#     return render_template("achievements.html")
 
-# Projects Page
-@app.route("/projects", methods=["GET"])
-def project():
-    return render_template("projects.html")
+# # Projects Page
+# @app.route("/projects", methods=["GET"])
+# def project():
+#     return render_template("projects.html")
 
-# Interests Page
-@app.route("/interests", methods=["GET"])
-def interests():
-    print("Test")
-    return render_template("interests.html")
+# # Interests Page
+# @app.route("/interests", methods=["GET"])
+# def interests():
+#     print("Test")
+#     return render_template("interests.html")
 
 # Gallery Page
 @app.route("/gallery", methods=["GET"])
