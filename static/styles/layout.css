@@ -169,6 +169,23 @@ p {
     color: white;
     text-decoration: none;
 }
+
+.footer-gallery {
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    color: white;
+    padding: 1%;
+    position: relative;
+    display: block;
+    border-top: solid #5B6DCD 0px;
+    color: #737373;
+    text-decoration: none;
+    text-align: center; 
+}
+
 /*!
  * Bootswatch v5.1.3
  * Homepage: https://bootswatch.com

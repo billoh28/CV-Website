@@ -59,6 +59,11 @@ def method_not_allowed(e):
 def home():
     return render_template("home.html")
 
+# Fitness Pal Page
+@app.route("/fitnesspal", methods=["GET"])
+def fitness_pal():
+    return render_template("fitnesspal.html")
+
 # # Work Experience Page
 # @app.route("/work_experience", methods=["GET"])
 # def work_exp():
@@ -89,6 +94,11 @@ def home():
 @app.route("/gallery", methods=["GET"])
 def gallery():
     return render_template("gallery.html")
+
+# Calender Page
+#@app.route("/calender", methods=["GET"])
+#def calender():
+#    return render_template("cal.html")
 
 # Download
 @app.route("/download", methods=["GET"])
