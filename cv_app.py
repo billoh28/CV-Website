@@ -59,11 +59,6 @@ def method_not_allowed(e):
 def home():
     return render_template("home.html")
 
-# Fitness Pal Page
-@app.route("/fitnesspal", methods=["GET"])
-def fitness_pal():
-    return render_template("fitnesspal.html")
-
 # # Work Experience Page
 # @app.route("/work_experience", methods=["GET"])
 # def work_exp():
@@ -103,7 +98,7 @@ def gallery():
 # Download
 @app.route("/download", methods=["GET"])
 def pdf():
-    return send_file(os.path.join('static', "CV_Bill_O'Hanlon_New.pdf"))
+    return send_file(os.path.join('static', "CV_Bill_OHanlon_2024.pdf"))
 
 # Browser Icon
 @app.route("/favicon.ico")

@@ -44,6 +44,11 @@
                 int.onclick = function() {
                     document.getElementById("int").scrollIntoView(true);
                 }
+                
+                if (window.innerHeight > window.innerWidth) {
+                    var content = document.getElementById("content");
+                    content.style.margin = "20px";
+                }
             };
         </script>
 
@@ -73,7 +78,7 @@
             
 
             <div class="page-content">
-                <div class="content">
+                <div class="content" id="content">
                     {% block content %}{% endblock %}
                 </div>
 
