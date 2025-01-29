@@ -47,7 +47,7 @@ def method_not_allowed(e):
 
 # Server Error
 @app.errorhandler(500)
-def method_not_allowed(e):
+def service_not_found(e):
     return render_template("500.html"), 500
 
 ###########################################################
@@ -98,7 +98,7 @@ def gallery():
 # Download
 @app.route("/download", methods=["GET"])
 def pdf():
-    return send_file(os.path.join('static', "CV_Bill_OHanlon_2024.pdf"))
+    return send_file(os.path.join('static', "CV_Bill_OHanlon_2025.pdf"))
 
 # Browser Icon
 @app.route("/favicon.ico")
