@@ -4,6 +4,8 @@
     <head>
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='styles/layout.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
         <title>Bill O'Hanlon CV Website</title>
 
         <script type="text/javascript">
@@ -46,8 +48,38 @@
                 }
                 
                 if (window.innerHeight > window.innerWidth) {
+                    // Mobile phone screen handling
+
                     var content = document.getElementById("content");
                     content.style.margin = "20px";
+
+                    var cv = document.getElementById("cv-link");
+                    cv.style.display = "block";
+                }
+            };
+
+            window.onresize = function() {
+                if (window.innerHeight > window.innerWidth) {
+                    // Mobile phone screen handling
+
+                    var content = document.getElementById("content");
+                    content.style.margin = "20px";
+
+                    var cv = document.getElementById("cv-link");
+                    cv.style.display = "block";
+
+                    var nav = document.getElementById("navbarColor02");
+                    nav.style.display = "none";
+                }
+                else {
+                    var content = document.getElementById("content");
+                    content.style.margin = "0 20% auto";
+
+                    var cv = document.getElementById("cv-link");
+                    cv.style.display = "none";
+
+                    var nav = document.getElementById("navbarColor02");
+                    nav.style.display = "block";
                 }
             };
         </script>
@@ -56,9 +88,9 @@
     <body>
         <div class="wrapper">
             <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> -->
               
                 <div class="collapse navbar-collapse" id="navbarColor02">
                     <div class="nav-bar">
@@ -74,7 +106,7 @@
                         </ul>
                     </div>
                 </div>
-              </nav>
+            </nav>
             
 
             <div class="page-content">
@@ -107,15 +139,13 @@
             <!-- These breaks are necessary to get the footer to stick to the bottom of the page for the pages with not enough content to fill the screen -->
             <div class="breaks"><br id="test"><br></div>
 
-            <footer class="footer">
+            <footer class="footer-gallery">
                 <br>
                 
-                <h3 class="footer-heading">Contact Details</h3>
+                <!-- <h3 class="footer-heading">Contact Details</h3> -->
                 <br>
-                <ul class="contact-info">
-                    <li><p>Email: <a style="text-decoration:none; color:inherit;" class="footer-link" href="mailto:bohanlon.enquiries@gmail.com">bohanlon.enquiries@gmail.com</a></p></li>
-                    <li><p><a style="text-decoration:none; color:inherit;" class="footer-link" href="https://www.linkedin.com/in/bill-o-hanlon-2b31041b5/">LinkedIn</a></p></li>
-                </ul>
+                    <p style="text-align: center;">Email: <a style="text-decoration:none; color:inherit;" class="footer-link" href="mailto:bohanlon.enquiries@gmail.com">bohanlon.enquiries@gmail.com</a></p>
+                    <p style="text-align: center;"><a style="text-decoration:none; color:inherit;" class="footer-link" href="https://www.linkedin.com/in/bill-o-hanlon-2b31041b5/">LinkedIn</a></p>
             </footer>
         </div>
     </body>
